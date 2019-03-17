@@ -1,3 +1,4 @@
+<!--Flexbox that uses angular flex.-->
 <div fxFlex fxLayout="column" fxLayoutGap="10px">
   <div fxLayout="row wrap">
     <div *ngFor="let rest of rests"
@@ -7,6 +8,7 @@
          fxFlex.xs="100"
          fxLayout="column"
          style="padding: 5px;">
+      <!--import the rest-card component for each restaurant-->
       <app-rest-card [restaurant]="rest" [userBudget]=20></app-rest-card>
     </div>
   </div>

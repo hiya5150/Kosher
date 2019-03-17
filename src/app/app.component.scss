@@ -1,10 +1,14 @@
+// import styles so the mat-color works.
 @import "~src/styles";
 
+//main content
 .container {
   height: 120vh;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+//background for all of it
 .wrapper {
   background-color: mat-color($kosher-accent);
 }

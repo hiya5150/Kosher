@@ -7,10 +7,14 @@ import {Restaurant} from '../../models/restaurant';
   styleUrls: ['./rest-card.component.scss']
 })
 export class RestCardComponent implements OnInit {
+  // region Variables
+  // The @Input() makes it so that these accept as tag attributes.
   @Input() restaurant: Restaurant;
   @Input() userBudget: number;
+  // endregion
+
+  // region Default Methods
   constructor() {}
-
   ngOnInit() {}
-
+  // endregion
 }

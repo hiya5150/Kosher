@@ -14,6 +14,7 @@ export class RestaurantsComponent implements OnInit {
   // endregion
 
   // region DefaultMethods
+  // instantiates the restaurant service.
   constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit() {
@@ -23,6 +24,7 @@ export class RestaurantsComponent implements OnInit {
 
   // region Service Getters
   getRestaurants(): void {
+    // subscribes to the observable of restaurants.
     this.restaurantService.getRestaurants()
       .subscribe(restaurants => {
         this.rests = restaurants;
