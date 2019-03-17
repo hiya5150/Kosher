@@ -1,3 +1,13 @@
-<div *ngFor="let rest of rests">
-  <app-rest-card [restaurant]="rest"></app-rest-card>
+<div fxFlex fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row wrap">
+    <div *ngFor="let rest of rests"
+         fxFlex="25"
+         fxFlex.md="33"
+         fxFlex.sm="50"
+         fxFlex.xs="100"
+         fxLayout="column"
+         style="padding: 5px;">
+      <app-rest-card [restaurant]="rest" [userBudget]=20></app-rest-card>
+    </div>
+  </div>
 </div>

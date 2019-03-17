@@ -8,7 +8,7 @@ import {Restaurant} from '../../models/restaurant';
 })
 export class RestCardComponent implements OnInit {
   @Input() restaurant: Restaurant;
-
+  @Input() userBudget: number;
   constructor() {}
 
   ngOnInit() {}

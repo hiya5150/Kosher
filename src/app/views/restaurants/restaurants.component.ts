@@ -8,16 +8,27 @@ import {RestaurantService} from '../../models/services/restaurant.service';
   styleUrls: ['./restaurants.component.scss']
 })
 export class RestaurantsComponent implements OnInit {
+  // region Values
   rests: Restaurant[];
+  columns: number;
+  // endregion
+
+  // region DefaultMethods
   constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit() {
     this.getRestaurants();
   }
+  // endregion
 
+  // region Service Getters
   getRestaurants(): void {
     this.restaurantService.getRestaurants()
-      .subscribe(restaurants => this.rests = restaurants);
+      .subscribe(restaurants => {
+        this.rests = restaurants;
+        this.columns = this.rests.length / 3;
+      });
   }
+  // endregion
 
 }

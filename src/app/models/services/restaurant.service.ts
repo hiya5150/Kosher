@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Restaurant } from '../restaurant';
 import {Observable, of} from 'rxjs';
+import {Address} from '../address';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class RestaurantService {
         phone: '(514) 555-2019',
         website: 'https://www.teamviral.com',
         rating: 5,
-        avgMealPrice: 20
+        avgMealPrice: 20,
       }),
       new Restaurant({
         name: 'Tav Cafe',
@@ -34,14 +35,30 @@ export class RestaurantService {
         name: 'Chops',
         website: 'https://www.teamviral.com',
         rating: 5,
-        avgMealPrice: 40
+        avgMealPrice: 40,
+        location: new Address({
+          streetNumber: 1313,
+          streetName: 'Mockingbird Lane',
+          city: 'Montreal',
+          province: 'QC',
+          country: 'Canada'
+        })
       }),
       new Restaurant({
         name: 'Yakimono',
         phone: '(718) 781-0990',
         website: 'https://www.google.com',
         rating: 5,
-        avgMealPrice: 50
+        avgMealPrice: 50,
+        location: new Address({
+          streetNumber: 221,
+          apartment: 'b',
+          streetName: 'Baker St.',
+          city: 'London',
+          province: 'ON',
+          postalCode: '1A2 B3C',
+          country: 'Canada'
+        })
       })
     ];
   }
