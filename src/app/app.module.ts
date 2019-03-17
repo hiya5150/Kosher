@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { RestCardComponent } from './views/rest-card/rest-card.component';
 import { RestaurantsComponent } from './views/restaurants/restaurants.component';
@@ -25,7 +26,8 @@ import { DivByBudgetPipe } from './controllers/div-by-budget.pipe';
     BrowserAnimationsModule,
     MatCardModule,
     MatGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

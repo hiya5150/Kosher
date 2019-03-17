@@ -1,0 +1,10 @@
+@import "~src/styles";
+
+.container {
+  height: 100vh;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.wrapper {
+  background-color: mat-color($kosher-accent);
+}
