@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Restaurant} from '../../models/restaurant';
 import {RestaurantService} from '../../models/services/restaurant.service';
+import {KosherApiService} from '../../models/services/kosher-api.service';
 
 @Component({
   selector: 'app-restaurants',
@@ -15,7 +16,7 @@ export class RestaurantsComponent implements OnInit {
 
   // region DefaultMethods
   // instantiates the restaurant service.
-  constructor(private restaurantService: RestaurantService) { }
+  constructor(private restaurantService: KosherApiService) { }
 
   ngOnInit() {
     this.getRestaurants();

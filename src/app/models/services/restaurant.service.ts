@@ -64,8 +64,8 @@ export class RestaurantService {
   }
 
   // region Getters
-  getRestaurants(): Observable<Restaurant[]> {
-    return of(this.restaurants);
-  }
+  // getRestaurants(): Observable<Restaurant[]> {
+  //   return of(this.restaurants);
+  // }
   // endregion
 }
